@@ -3,6 +3,7 @@ kind: Kustomization
 
 helmCharts:
 - name: traefik
+  namespace: traefik
   includeCRDs: true
   releaseName: traefik
   version: 31.0.0
@@ -18,4 +19,6 @@ patches:
     - op: add
       path: /spec/template/spec/containers/0/args/-1
       value: "--serverstransport.insecureskipverify=true"
- 
+
+resources:
+- manifests/traefik.namespace.yaml
