@@ -2,7 +2,7 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argo-cd.ingressroute
+  name: home.k8s.argocd.ingressroute
   namespace: default
 spec:
   entryPoints:                     # [1]
@@ -11,6 +11,6 @@ spec:
   - kind: Rule
     match: Host(`argocd.k8s.home`) # [3]
     services:                      # [8]
-    - name: argo-cd-argocd-server
+    - name: argocd-server
       namespace: argo-cd
       port: 443

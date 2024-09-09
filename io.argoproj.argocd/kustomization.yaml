@@ -1,10 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+#namespace: argo-cd
 
 helmCharts:
 - name: argo-cd
+  namespace: argo-cd
   includeCRDs: true
-  releaseName: argo-cd
+  releaseName: argocd
   version: 7.5.2
   repo: https://argoproj.github.io/argo-helm
   valuesFile: values.yaml
@@ -19,5 +21,6 @@ patches:
       value: --enable-helm
 
 resources:
-- argo-cd.nodeport.yaml
-- argo-cd.ingressroute.yaml
+- manifests/argocd.namespace.yaml
+- manifests/argocd.nodeport.yaml
+- manifests/argocd.ingressroute.yaml
