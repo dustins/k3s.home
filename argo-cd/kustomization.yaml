@@ -20,3 +20,4 @@ patches:
 
 resources:
 - argo-cd.nodeport.yaml
+- argo-cd.ingressroute.yaml
