@@ -5,6 +5,6 @@ metadata:
   namespace: metallb-system
 spec:
   ipAddressPools:
-  - k8s-home
+  - home.k8s.metallb.ipaddresspool
   interfaces:
   - k3s0
