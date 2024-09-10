@@ -22,5 +22,4 @@ patches:
 
 resources:
 - manifests/argocd.namespace.yaml
-- manifests/argocd.nodeport.yaml
 - manifests/argocd.ingressroute.yaml
