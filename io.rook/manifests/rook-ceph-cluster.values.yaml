@@ -382,15 +382,12 @@ cephClusterSpec:
     - name: "nix-1"
       devices:
       - name: "/dev/disk/by-id/nvme-INTEL_SSDPE2KX020T8_PHLJ1060024S2P0BGN"
-      - name: "/dev/disk/by-id/nvme-eui.002538a411c17651"
     - name: "nix-2"
       devices:
       - name: "/dev/disk/by-id/nvme-INTEL_SSDPE2KX020T8_PHLJ1060025Y2P0BGN"
-      - name: "/dev/disk/by-id/nvme-PCIe_SSD_19071225600598"
     - name: "nix-3"
       devices:
       - name: "/dev/disk/by-id/nvme-INTEL_SSDPE2KX020T8_PHLJ1061010S2P0BGN"
-      - name: "/dev/disk/by-id/nvme-WDC_WDS256G1X0C-00ENX0_180693803454"
 
   # The section for configuring management of daemon disruptions during upgrade or fencing.
   disruptionManagement:
