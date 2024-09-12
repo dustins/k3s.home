@@ -50,7 +50,7 @@ toolbox:
 monitoring:
   # -- Enable Prometheus integration, will also create necessary RBAC rules to allow Operator to create ServiceMonitors.
   # Monitoring requires Prometheus to be pre-installed
-  enabled: false
+  enabled: true
   # -- Whether to create the Prometheus rules for Ceph alerts
   createPrometheusRules: false
   # -- The namespace in which to create the prometheus rules, if different from the rook cluster namespace.
@@ -177,9 +177,9 @@ cephClusterSpec:
       # Requires a kernel that supports msgr v2 (kernel 5.11 or CentOS 8.4 or newer).
       requireMsgr2: false
   #   # enable host networking
-  #   provider: host
+    provider: host
   #   # EXPERIMENTAL: enable the Multus network provider
-  #   provider: multus
+  #   #  provider: multus
   #   selectors:
   #     # The selector keys are required to be `public` and `cluster`.
   #     # Based on the configuration, the operator will do the following:
@@ -190,6 +190,7 @@ cephClusterSpec:
   #     #
   #     # public: public-conf --> NetworkAttachmentDefinition object name in Multus
   #     # cluster: cluster-conf --> NetworkAttachmentDefinition object name in Multus
+
   #   # Provide internet protocol version. IPv6, IPv4 or empty string are valid options. Empty string would mean IPv4
   #   ipFamily: "IPv6"
   #   # Ceph daemons to listen on both IPv4 and Ipv6 networks
