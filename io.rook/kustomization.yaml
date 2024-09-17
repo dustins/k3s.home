@@ -8,8 +8,8 @@ helmCharts:
   releaseName: rook-ceph
   version: 1.15.1
   repo: https://charts.rook.io/release
-#  additionalValuesFiles:
-#  - manifests/rook-ceph-operator.values.yaml
+  additionalValuesFiles:
+  - manifests/rook-ceph-operator.values.yaml
 
 - name: rook-ceph-cluster
   namespace: rook-ceph
